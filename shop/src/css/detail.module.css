@@ -1,5 +1,6 @@
-.detail-Card {
-  height: 300px;
-  background-size: cover;
-  background-position: center;
+img {
+  width: 500px;
+  height: 400px;
+  margin-top: 40px;
+  border-radius: 10px;
 }

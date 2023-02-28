@@ -18,7 +18,8 @@ function App() {
           <Navbar.Brand href="/">ShoesShop</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/detail">detail</Nav.Link>
+            <Nav.Link href="/detail">Detail</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
           </Nav>
           <button
             onClick={() => {
