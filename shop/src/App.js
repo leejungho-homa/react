@@ -39,7 +39,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Main shoes={shoes} />} />
-        <Route path="/detail" element={<Detail />} />
+        <Route path="/detail/:id" element={<Detail shoes={shoes} />} />
+
         <Route path="/about" element={<About />}>
           <Route path="member" element={<div>멤버임</div>} />
           <Route path="location" element={<div>위치정보임</div>} />
