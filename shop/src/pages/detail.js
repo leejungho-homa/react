@@ -1,7 +1,16 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../css/detail.module.css"; //이름.module.css는 그 파일에만 종속됨//
 
 export function Detail(props) {
+  let [alert, setAlert] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAlert(false);
+    }, 2000);
+  }); //html이 랜더링 된 뒤에 실행됨 (mount, update 시)
+
   let { id } = useParams();
   // .find()는 array에서 해당하는게 맞으면 가져와줌
   // id params에 맞는 내용을 가져오기.
@@ -12,6 +21,12 @@ export function Detail(props) {
 
   return (
     <div className="container text-center">
+      {alert === true ? (
+        <div className="alert alert-warning">
+          2초 이내 구매시 할인
+          <button>구입</button>
+        </div>
+      ) : null}
       <div className="row">
         <div className="col">
           <img
